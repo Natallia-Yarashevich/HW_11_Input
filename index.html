@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание <Input></Input></title>
+</head>
+
+<body>
+    <h1>Задание со звездочкой</h1>
+    <label>Введите число:</label>
+    <input type='number' id="inputNumber">
+    <br>
+    <br>
+    <label>Квадрат числа:</label>
+    <input type="text" id="squared" readonly>
+    <br>
+    <br>
+    <button onclick="square()">Возведение в квадрат</button>
+
+    <script>
+        function square() {
+            let num = document.getElementById("inputNumber").value;
+            let squared = (num ** 2).toFixed(1);
+            document.getElementById("squared").value = squared;
+        }
+    </script>
+</body>
+
+</html>
